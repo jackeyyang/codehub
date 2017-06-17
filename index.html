@@ -5,6 +5,22 @@
 	<title>函数属性、方法和构造函数</title>
 </head>
 <body>
-	
+	<script type="text/javascript">
+		function write(str){
+			document.write(str +"<br />");
+		}
+		/**
+		 * lenght属性
+		 */
+		function fun(x,y,z){
+			write(arguments.length); // 2 argument 代表传入的实参；
+			write(fun.length); // 3 形参个数
+			write(arguments.callee.length) // 3
+			if(arguments.length != arguments.callee.length){
+				throw Error("请输入正确的参数个数");
+			}
+		};
+		fun(1,2,1);
+	</script>
 </body>
 </html>
